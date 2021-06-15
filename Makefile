@@ -12,7 +12,7 @@
 
 NAME	=		libft.a
 
-SRCS	=		ft_isprint.c ft_toupper.c ft_tolower.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c
+SRCS	=		ft_isprint.c ft_toupper.c ft_tolower.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_atoi.c
 
 OBJS	=		$(SRCS:.c=.o)
 

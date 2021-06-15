@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include <stdlib.h>
+
 int	ft_atoi(char *str)
 {
 	size_t sign;
@@ -18,7 +21,7 @@ int	ft_atoi(char *str)
 
 	sign = 0;
 	i = 0;
-	result = 1;
+	result = 0;
 
 	while((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
@@ -28,15 +31,15 @@ int	ft_atoi(char *str)
 			sign++;
 		i++;
 	}
-	while(str[i] == 32)
+	while(str[i] == 48)
 		i++;
 	while(str[i] >= 48 && str[i] <= 57)
 	{
-		result = (str[i] - 48)
+		result = result * 10 + ((str[i] - 48) % 10);
 		i++;
 	}
 	if (sign % 2 == 1)
-		return (result * (-1);
+		return (result * (-1));
 	else
 		return (result);
 }
