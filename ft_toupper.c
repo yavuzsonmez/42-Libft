@@ -6,11 +6,14 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:12:39 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/15 11:15:35 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/15 14:36:55 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	return (c - 32);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }

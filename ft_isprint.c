@@ -6,14 +6,14 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:17:33 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/15 11:25:50 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/15 14:59:55 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 0 && c <= 31)
-		return (0);
-	else
+	if (c >= 32 && c <= 126)
 		return (1);
+	else
+		return (0);
 }
