@@ -1,45 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/15 15:45:56 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/15 18:42:22 by ysonmez          ###   ########.fr       */
+/*   Created: 2021/06/15 18:34:13 by ysonmez           #+#    #+#             */
+/*   Updated: 2021/06/15 19:08:57 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_atoi(char *str)
+void *ft_memset(void *s, int c, size_t n)
 {
-	size_t sign;
 	size_t i;
-	int result;
 
-	sign = 0;
 	i = 0;
-	result = 0;
-
-	while((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	while(str[i] == 43 || str[i] == 45)
+	while (i < n)
 	{
-		if (str[i] == 45)
-			sign++;
+		((unsigned char *) s)[i] = c;
 		i++;
 	}
-	while(str[i] == 48)
-		i++;
-	while(str[i] >= 48 && str[i] <= 57)
-	{
-		result = result * 10 + ((str[i] - 48) % 10);
-		i++;
-	}
-	if (sign % 2 == 1)
-		return (result * (-1));
-	else
-		return (result);
+	return(s);
 }
-
