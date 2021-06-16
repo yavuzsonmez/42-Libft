@@ -6,13 +6,13 @@
 #    By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/15 12:03:05 by ysonmez           #+#    #+#              #
-#    Updated: 2021/06/15 18:43:09 by ysonmez          ###   ########.fr        #
+#    Updated: 2021/06/16 09:17:34 by ysonmez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=		libft.a
 
-SRCS	=		ft_isprint.c ft_toupper.c ft_tolower.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_atoi.c ft_memset.c
+SRCS	=		ft_isprint.c ft_toupper.c ft_tolower.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c ft_atoi.c ft_memset.c ft_bzero.c ft_memcpy.c
 
 OBJS	=		$(SRCS:.c=.o)
 
