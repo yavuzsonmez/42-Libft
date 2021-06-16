@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:30:20 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 10:43:56 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/16 16:45:12 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] =  0;
+		((unsigned char *)s)[i] = 0;
 		i++;
 	}
 }

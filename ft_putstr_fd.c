@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:14:34 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 16:34:20 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/16 16:53:15 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	if(s)
+	if (s)
+	{
 		while (s[i])
 		{
 			write(fd, s + i, 1);
 			i++;
 		}
+	}
 }

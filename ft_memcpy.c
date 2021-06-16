@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:12:07 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 12:32:15 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/16 16:49:27 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!(dest) && !(src))
