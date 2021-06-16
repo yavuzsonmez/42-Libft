@@ -6,18 +6,18 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:30:20 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 08:56:47 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/16 10:43:56 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t i;
 
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		((unsigned char *)s)[i] =  0;
 		i++;

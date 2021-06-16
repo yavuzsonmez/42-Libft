@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 09:12:07 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 10:42:03 by ysonmez          ###   ########.fr       */
+/*   Created: 2021/06/16 09:44:48 by ysonmez           #+#    #+#             */
+/*   Updated: 2021/06/16 10:03:51 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+void *ft_memccpy(void *restrict dest, const void *restrict src, int c, size_t n)
 {
 	size_t i;
 
 	i = 0;
-	if (!(dest) && !(src))
+	if(!(dest) && !(src))
 		return (NULL);
-	while (i < n)
+	while ((i < n) && ((unsigned char *) src)[i] != c)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		((unsigned char *) dest)[i] = ((unsigned char *) src)[i];
 		i++;
 	}
-	return (dest);
+	if (i == n && ((unsigned char *) src)[i] != c)
+		return(NULL);
+	return(dest + 1);
 }

@@ -6,21 +6,21 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 18:34:13 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/15 19:08:57 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/16 10:43:17 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t i;
 
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *) s)[i] = c;
+		((unsigned char *)s)[i] = c;
 		i++;
 	}
-	return(s);
+	return (s);
 }
