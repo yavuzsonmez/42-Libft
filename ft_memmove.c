@@ -6,13 +6,15 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:57:37 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 12:10:04 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/16 15:31:19 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 
 }
+*/
