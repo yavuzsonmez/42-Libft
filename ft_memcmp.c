@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/16 09:12:07 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 12:32:15 by ysonmez          ###   ########.fr       */
+/*   Created: 2021/06/16 12:30:53 by ysonmez           #+#    #+#             */
+/*   Updated: 2021/06/16 14:20:59 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t i;
 
 	i = 0;
-	if (!(dest) && !(src))
-		return (NULL);
-	while (i < n)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+	if(n == 0)
+		return (0);
+	while ((i < n) && (((unsigned char *)s1)[i] == ((unsigned char *)s2)[i]))
 		i++;
-	}
-	return (dest);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

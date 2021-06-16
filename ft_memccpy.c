@@ -6,13 +6,13 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:44:48 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 10:03:51 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/16 12:32:01 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void *ft_memccpy(void *restrict dest, const void *restrict src, int c, size_t n)
+void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t i;
 
