@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 13:56:21 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:51:07 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/17 17:33:19 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ char *ft_strtrim(char const *s1, char const *set)
 	char	ts;
 
 	i = 0;
-	ts = NULL;
 
 	ts = (char*)malloc(sizeof());
 	if(ts == NULL)

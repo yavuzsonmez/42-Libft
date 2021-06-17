@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 08:36:11 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:50:52 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/17 17:28:10 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ char	*ft_itoa(int n)
 	size_t			digit;
 	unsigned int	number;
 
-	s = NULL;
 	if (n < 0)
 	{
 		number = n * (-1);
@@ -69,7 +68,7 @@ char	*ft_itoa(int n)
 	s = (char *)malloc(sizeof(char) * (digit + 1));
 	if (!s)
 		return (NULL);
-	s = get_s(digit, number, s);
+	get_s(digit, number, s);
 	if (n < 0)
 		s[0] = 45;
 	s[digit] = 0;
