@@ -6,12 +6,14 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:41:10 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 10:01:59 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/17 15:52:02 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
+
+void	*ft_memset(void *s, int c, size_t n);
 
 #endif
