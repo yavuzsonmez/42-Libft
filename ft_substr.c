@@ -6,10 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 17:40:11 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/16 18:29:16 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/17 10:41:47 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stddef.h>
 #include <stdlib.h>
 
@@ -20,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	ss = NULL;
 	i = 0;
-	if (ss == (char *)malloc(sizeof(char) * (len + 1)))
+	if (ss = (char *)malloc(sizeof(char) * (len + 1)))
 		return (NULL);
 	while(s[start + i] && i < len)
 	{
@@ -31,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (ss);
 }
 
-/*
+
 #include <stdio.h>
 
 int main()
@@ -40,4 +41,5 @@ int main()
 	printf("%s", ft_substr("Hello", 2, 3));
 	return 0;
 }
+
 */
