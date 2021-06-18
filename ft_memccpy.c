@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:44:48 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:50:54 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/18 13:12:05 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		((unsigned char *) dest)[i] = ((unsigned char *) src)[i];
 		i++;
 	}
-	if (i == n && ((unsigned char *) src)[i] != c)
-		return (NULL);
-	return (dest + 1);
+	return (dest);
 }

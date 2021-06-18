@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:13:53 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 18:27:52 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/18 15:45:42 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	arr = malloc(size * nmemb);
 	if (!(arr))
 		return (NULL);
-	ft_memset(arr, 0, size * nmemb);
+	ft_bzero(arr, size * nmemb);
 	return (arr);
 }
