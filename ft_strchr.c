@@ -6,7 +6,20 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:51:11 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:51:20 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/18 19:07:20 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
+char	*ft_strchr(const char *s, int c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != c && s[i])
+		i++;
+	if (s[i] == c)
+		return (((char *)s) + i);
+	return (NULL);
+}
