@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
-
-void	*malloc(size_t size);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -39,12 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ss[i] = 0;
 	return (ss);
 }
-
-/*
-int main()
-{
-	printf("%s", ft_substr("bonjour", 8, 4));
-	return 0;
-}
-
-*/

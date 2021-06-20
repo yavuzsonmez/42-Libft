@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
-
-void	*malloc(size_t size);
 
 char	*ft_strdup(const char *s)
 {

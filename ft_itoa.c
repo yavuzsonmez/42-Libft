@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*malloc(size_t size);
+#include "libft.h"
 
 static int	count_digit(unsigned int n)
 {

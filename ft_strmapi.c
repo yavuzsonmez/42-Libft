@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
-
-void	*malloc(size_t size);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
-
-void	*malloc(size_t size);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

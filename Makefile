@@ -25,7 +25,7 @@ AR		=		ar rc
 RM		=		rm -f
 
 .c.o:
-			$(CC) $(CFLAGS) -I includes -c $< -o $(<:.c=.o)
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
 			$(AR) $(NAME) $(OBJS)

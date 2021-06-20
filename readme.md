@@ -1,8 +1,8 @@
 **Libft**
 
-Algorithmic, Unix
+#Imperative programming #Algorithms #Rigor #Unix_logic
 
-Creation of my own library of bascis functions in C in order to work on bigger project
+We need to recode a few functions of the C standard library as well as some other utility functions that we will use during our whole cursus.
 
 
 
@@ -12,3 +12,4 @@ const void
 unsigned char
 size_t
 static functions
+chained list

@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
-
-void	*malloc(size_t size);
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
