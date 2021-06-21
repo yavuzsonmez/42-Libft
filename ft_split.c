@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 11:57:37 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/21 13:51:57 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/21 14:02:34 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ static char	*newstr(char const *s, char c)
 	str = (char *)malloc(sizeof(char) * (count + 1));
 	if (!str)
 		return (NULL);
-	j = i + 1;
 	while (k < count)
 	{
 		str[k] = s[j];
@@ -91,14 +90,14 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-
+/*
 int main(void)
 {
 	int i = 0;
 	char const c = 'd';
 	char const *s;
 
-	s = strdup("BonjourdBonjourd");
+	s = strdup("BonjourBonjourd");
 	char **arr = ft_split(s, c);
 
 	while(arr[i])
@@ -108,3 +107,4 @@ int main(void)
 	}
 	return 0;
 }
+*/
