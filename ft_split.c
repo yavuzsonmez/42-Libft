@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 11:57:37 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/21 14:02:34 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/21 16:06:34 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ static size_t	count_str(char const *s, char const c)
 	str = 0;
 	while (s[i])
 	{
-		if (s[i] == c && i > 0 && s[i - 1] != c)
+		while(s[i] && s[i] == c)
+			i++;
+		while(s[i] && s[i] != c)
+			i++;
+		if (s[i] == c)
 			str++;
-		i++;
 	}
 	return (str);
 }
@@ -90,14 +93,13 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-/*
 int main(void)
 {
 	int i = 0;
 	char const c = 'd';
 	char const *s;
 
-	s = strdup("BonjourBonjourd");
+	s = strdup("ddddBonjourddSalutd");
 	char **arr = ft_split(s, c);
 
 	while(arr[i])
@@ -107,4 +109,3 @@ int main(void)
 	}
 	return 0;
 }
-*/
