@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:41:10 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/21 09:58:01 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/21 17:34:23 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 # define LIBFT_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 void	*malloc(size_t size);
-void	free(void *ptr);
 
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);

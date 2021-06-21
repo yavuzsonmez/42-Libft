@@ -6,11 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:44:48 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/21 09:06:10 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/21 17:32:32 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {

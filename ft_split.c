@@ -5,107 +5,89 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/19 11:57:37 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/21 16:06:34 by ysonmez          ###   ########.fr       */
+/*   Created: 2021/06/21 16:25:17 by ysonmez           #+#    #+#             */
+/*   Updated: 2021/06/21 17:33:14 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <string.h>
-#include <stdio.h>
-
 static size_t	count_str(char const *s, char const c)
 {
 	size_t	i;
-	size_t	str;
+	size_t	strcount;
 
 	i = 0;
-	str = 0;
+	strcount = 0;
+	if (s[0] && s[0] != c)
+		strcount++;
 	while (s[i])
 	{
-		while(s[i] && s[i] == c)
-			i++;
-		while(s[i] && s[i] != c)
-			i++;
-		if (s[i] == c)
-			str++;
+		if (s[i] == c && s[i + 1] && s[i + 1] != c)
+			strcount++;
+		i++;
 	}
-	return (str);
+	return (strcount);
 }
 
-//static size_t	count_char(char const *s, char const c)
-//{
-//	static size_t	i;
-//}
+static size_t	count_char(char const *s, char const c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return (i);
+		i++;
+	}
+	return (i);
+}
 
 static char	*newstr(char const *s, char c)
 {
-	static size_t	i;
-	size_t			j;
-	size_t			k;
-	size_t			count;
-	char			*str;
+	size_t	i;
+	size_t	charcount;
+	char	*str;
 
 	i = 0;
-	count = 0;
-	k = 0;
-	while (s[i] == c)
-		i++;
-	j = i;
-	while (s[i] && s[i] != c)
-	{
-		count++;
-		i++;
-	}
-	str = (char *)malloc(sizeof(char) * (count + 1));
+	charcount = count_char(s, c);
+	str = (char *)malloc(sizeof(char) * (charcount + 1));
 	if (!str)
 		return (NULL);
-	while (k < count)
+	while (i < charcount)
 	{
-		str[k] = s[j];
-		j++;
-		k++;
+		str[i] = s[i];
+		i++;
 	}
-	str[k] = 0;
+	str[i] = 0;
 	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	c_str;
-	char	**arr;
+	size_t	p;
+	size_t	strcount;
+	char	**ar;
 
 	i = 0;
+	p = 0;
 	if (!s)
 		return (NULL);
-	c_str = count_str(s, c);
-	arr = (char **)malloc(sizeof(char *) * (c_str + 1));
-	if (!arr)
+	strcount = count_str(s, c);
+	ar = (char **)malloc(sizeof(char *) * (strcount + 1));
+	if (!ar)
 		return (NULL);
-	while (i < c_str)
+	while (i < strcount)
 	{
-		arr[i] = newstr(s, c);
+		while (s[p] && s[p] == c)
+			p++;
+		ar[i] = newstr(s + p, c);
+		while (s[p] && s[p] != c)
+			p++;
 		i++;
 	}
-	arr[i] = NULL;
-	return (arr);
-}
-
-int main(void)
-{
-	int i = 0;
-	char const c = 'd';
-	char const *s;
-
-	s = strdup("ddddBonjourddSalutd");
-	char **arr = ft_split(s, c);
-
-	while(arr[i])
-	{
-		printf("%s\n", arr[i]);
-		i++;
-	}
-	return 0;
+	ar[i] = NULL;
+	return (ar);
 }
