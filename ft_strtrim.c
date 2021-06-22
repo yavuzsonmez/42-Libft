@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 14:34:24 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/21 18:38:25 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 09:17:06 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,12 @@ static size_t	ccount(char const *s1, char const *set)
 		count++;
 		i++;
 	}
+	if (i == ft_strlen(s1))
+		return (0);
 	while (s1[i])
 		i++;
 	i--;
-	while (s1[i] && checkchar(s1[i], set) == 1)
+	while (s1[i] && i > 0 && checkchar(s1[i], set) == 1)
 	{
 		count++;
 		i--;
@@ -69,7 +71,7 @@ static size_t	position(char const *s, char const *set, int pos)
 		while (s[i])
 			i++;
 		i--;
-		while (s[i] && checkchar(s[i], set) == 1)
+		while (s[i] && i > 0 && checkchar(s[i], set) == 1)
 			i--;
 	}
 	return (i);
