@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 17:40:11 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/22 09:50:39 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 10:26:50 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (ft_strlen(s + start) >= len)
+	if (start >= ft_strlen(s))
+		count = 0;
+	else if (ft_strlen(s + start) >= len)
 		count = len;
 	else
 		count = ft_strlen(s + start);
