@@ -6,9 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 10:34:25 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:51:57 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:03:14 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

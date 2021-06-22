@@ -6,11 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 15:45:56 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:50:41 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:07:11 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {

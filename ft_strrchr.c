@@ -6,11 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:51:47 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/18 19:07:13 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:03:33 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

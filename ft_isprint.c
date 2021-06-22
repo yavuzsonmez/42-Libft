@@ -6,9 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:17:33 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:50:51 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:05:05 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

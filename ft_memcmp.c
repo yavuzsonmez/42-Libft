@@ -6,11 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 12:30:53 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:50:56 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:04:50 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:30:20 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/18 15:45:39 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:05:23 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

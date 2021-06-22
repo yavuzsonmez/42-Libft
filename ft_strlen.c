@@ -6,11 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 15:09:09 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/18 10:20:19 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:03:58 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

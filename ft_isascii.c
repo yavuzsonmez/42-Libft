@@ -6,9 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 15:13:24 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:50:48 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:05:12 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,9 +6,11 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 11:12:39 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 15:51:59 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:03:10 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
