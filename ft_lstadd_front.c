@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 17:24:47 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/22 17:31:28 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/22 18:00:00 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	*lst -> next = new;
+	*lst = new;
 }
