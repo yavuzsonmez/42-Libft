@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 15:45:56 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/22 14:07:11 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/23 10:28:33 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(char *str)
 	result = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	while (str[i] == 43 || str[i] == 45)
+	if (str[i] == 43 || str[i] == 45)
 	{
 		if (str[i] == 45)
 			sign++;
