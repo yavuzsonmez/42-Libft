@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 18:00:12 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/23 11:49:29 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/23 15:59:26 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_lstsize(t_list *lst)
 	tmp = lst;
 	while (tmp != NULL)
 	{
-		tmp = tmp->next;
+		tmp = tmp -> next;
 		i++;
 	}
 	return (i);
