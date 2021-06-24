@@ -6,7 +6,7 @@
 /*   By: yavuzsonmez <yavuzsonmez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 11:24:48 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/23 23:31:07 by yavuzsonmez      ###   ########.fr       */
+/*   Updated: 2021/06/24 11:34:47 by yavuzsonmez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,23 @@
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list *new;
-	t_list *tmp;
+	size_t	i;
+	size_t	j;
 
-	new = NULL;
-	tmp = (t_list *)malloc(sizeof(t_list *));
-	if (!tmp)
+	i = ft_lstsize(lst);
+	j = 0;
+	(void)del;
+	new = malloc(sizeof(t_list) * ft_lstsize(lst));
+	if (!new || !lst)
 		return (NULL);
-	new = (t_list *)malloc(sizeof(t_list *));
-	if (!new)
-		return (NULL);
-	new -> content = f(new -> content);
-	new -> next = lst -> next;
-	tmp = new;
-	del(new -> content);
-	free(new);
-	while (lst != NULL)
+	while (j + 1 < i)
 	{
-		new = (t_list *)malloc(sizeof(t_list *));
-		if (!new)
-			return (NULL);
-		new -> content = f(new -> content);
-		new -> next = lst -> next;
+		new[j].content = f(lst -> content);
+		new[j].next = &new[j + 1];
 		lst = lst -> next;
+		j++;
 	}
-	return (tmp);
+	new[j].content = f(lst -> content);
+	new[j].next = NULL;
+	return (new);
 }
