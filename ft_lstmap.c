@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 11:24:48 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/24 17:37:32 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/24 17:50:46 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*nlist;
 
 	head = NULL;
-	if (!lst)
-		return (NULL);
 	while (lst != NULL)
 	{
 		nlist = ft_lstnew(f(lst -> content));
