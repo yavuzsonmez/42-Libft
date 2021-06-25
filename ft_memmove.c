@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:57:37 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/23 18:06:21 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/06/25 12:09:29 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ static size_t	check_overlap(void *dest, const void *src, size_t n)
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-
-	i = 0;
 	if (!(dest) && !(src))
 		return (NULL);
 	if (check_overlap(dest, src, n) == 0)
