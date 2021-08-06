@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_memfree.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/23 11:24:36 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/08/06 11:02:50 by ysonmez          ###   ########.fr       */
+/*   Created: 2021/08/06 10:57:32 by ysonmez           #+#    #+#             */
+/*   Updated: 2021/08/06 10:58:07 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_memfree(void *ptr)
 {
-	del(lst -> content);
-	ft_memfree(lst);
+	if (!ptr)
+		return ;
+	free(ptr);
+	ptr = NULL;
 }

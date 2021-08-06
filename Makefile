@@ -6,7 +6,7 @@
 #    By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/15 12:03:05 by ysonmez           #+#    #+#              #
-#    Updated: 2021/06/22 17:23:37 by ysonmez          ###   ########.fr        #
+#    Updated: 2021/08/06 10:58:58 by ysonmez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,8 @@ SRCS	=		ft_atoi.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c \
+				ft_memfree.c \
+				ft_memfreeall.c \
 
 OBJS	=		$(SRCS:.c=.o)
 
