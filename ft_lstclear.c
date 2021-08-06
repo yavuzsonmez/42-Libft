@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 11:24:32 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/08/06 11:01:19 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/08/06 11:30:59 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		rm = tmp -> next;
 		del(tmp -> content);
-		ft_memfree(tmp);
+		ft_memfree((void *)tmp);
 		tmp = rm;
 	}
 	*lst = NULL;
