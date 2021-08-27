@@ -6,7 +6,7 @@
 #    By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/15 12:03:05 by ysonmez           #+#    #+#              #
-#    Updated: 2021/08/06 10:58:58 by ysonmez          ###   ########.fr        #
+#    Updated: 2021/08/27 15:40:18 by ysonmez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS	=		ft_atoi.c \
 				ft_putstr_fd.c \
 				ft_split.c \
 				ft_strchr.c \
+				ft_strchr_pos.c \
 				ft_strdup.c \
 				ft_strjoin.c \
 				ft_strlcpy.c \
