@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:41:10 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/10/13 16:05:42 by home             ###   ########.fr       */
+/*   Updated: 2021/10/13 18:23:36 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	ft_memfree(void **ptr);
-void	ft_memfreeall(void **ptr);
+void	ft_memfreeall(void ***ptr);
 
 typedef struct s_list
 {
