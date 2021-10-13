@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 08:36:11 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/17 17:28:10 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:05:22 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	*ft_itoa(int n)
 		digit = count_digit(number);
 	}
 	s = (char *)malloc(sizeof(char) * (digit + 1));
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	get_s(digit, number, s);
 	if (n < 0)

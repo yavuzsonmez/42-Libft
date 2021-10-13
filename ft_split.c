@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 16:25:17 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/21 17:42:37 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:20:48 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static size_t	count_str(char const *s, char const c)
 
 	i = 0;
 	strcount = 0;
-	if (s[0] && s[0] != c)
+	if (s[0] != '\0' && s[0] != c)
 		strcount++;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (s[i] == c && s[i + 1] && s[i + 1] != c)
 			strcount++;
@@ -35,7 +35,7 @@ static size_t	count_char(char const *s, char const c)
 	size_t	i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 			return (i);
@@ -53,7 +53,7 @@ static char	*newstr(char const *s, char c)
 	i = 0;
 	charcount = count_char(s, c);
 	str = (char *)malloc(sizeof(char) * (charcount + 1));
-	if (!str)
+	if (str == NULL)
 		return (NULL);
 	while (i < charcount)
 	{
@@ -73,18 +73,18 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	p = 0;
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	strcount = count_str(s, c);
 	ar = (char **)malloc(sizeof(char *) * (strcount + 1));
-	if (!ar)
+	if (ar == NULL)
 		return (NULL);
 	while (i < strcount)
 	{
-		while (s[p] && s[p] == c)
+		while (s[p] != '\0' && s[p] == c)
 			p++;
 		ar[i] = newstr(s + p, c);
-		while (s[p] && s[p] != c)
+		while (s[p] != '\0' && s[p] != c)
 			p++;
 		i++;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 11:24:32 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/08/06 11:30:59 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:08:28 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	tmp = *lst;
 	while (tmp != NULL)
 	{
-		rm = tmp -> next;
-		del(tmp -> content);
-		ft_memfree((void *)tmp);
+		rm = tmp->next;
+		del(tmp->content);
+		free(tmp);
 		tmp = rm;
 	}
 	*lst = NULL;

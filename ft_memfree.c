@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memfree.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 10:57:32 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/08/06 10:58:07 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:12:02 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memfree(void *ptr)
+void	ft_memfree(void **ptr)
 {
-	if (!ptr)
+	if (ptr == NULL)
 		return ;
-	free(ptr);
-	ptr = NULL;
+	free(*ptr);
+	*ptr = NULL;
 }

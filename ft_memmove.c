@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 10:57:37 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/25 12:09:29 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:14:04 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static size_t	check_overlap(void *dest, const void *src, size_t n)
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (!(dest) && !(src))
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	if (check_overlap(dest, src, n) == 0)
 		ft_memcpy(dest, src, n);

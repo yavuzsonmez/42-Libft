@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr_pos.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 15:39:29 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/08/27 15:39:53 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:21:23 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strchr_pos(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (s[i] && s[i] != c)
+	while (s[i] != '\0' && s[i] != c)
 		i++;
 	if (s[i] == c)
 		return (i);

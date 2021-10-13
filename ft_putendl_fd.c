@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:39:02 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/22 14:04:29 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:16:03 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_putendl_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
-	if (s)
+	if (s != NULL)
 	{
-		while (s[i])
+		while (s[i] != '\0')
 		{
 			write(fd, s + i, 1);
 			i++;

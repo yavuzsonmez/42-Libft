@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 15:09:09 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/08/27 13:34:11 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:26:21 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlen(const char *s)
 	i = 0;
 	if (s == NULL)
 		return (0);
-	while (s[i] != 0)
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }

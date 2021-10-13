@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
+/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 14:34:24 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/06/22 09:17:06 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/10/13 15:28:56 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	checkchar(char const c, char const *set)
 	size_t	i;
 
 	i = 0;
-	while (set[i] != 0)
+	while (set[i] != '\0')
 	{
 		if (c == set[i])
 			return (1);
@@ -33,19 +33,19 @@ static size_t	ccount(char const *s1, char const *set)
 
 	i = 0;
 	count = 0;
-	if (s1[i] == 0)
+	if (s1[i] == '\0')
 		return (0);
-	while (s1[i] && checkchar(s1[i], set) == 1)
+	while (s1[i] != '\0' && checkchar(s1[i], set) == 1)
 	{
 		count++;
 		i++;
 	}
 	if (i == ft_strlen(s1))
 		return (0);
-	while (s1[i])
+	while (s1[i] != '\0')
 		i++;
 	i--;
-	while (s1[i] && i > 0 && checkchar(s1[i], set) == 1)
+	while (s1[i] != '\0' && i > 0 && checkchar(s1[i], set) == 1)
 	{
 		count++;
 		i--;
