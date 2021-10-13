@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 11:24:36 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/10/13 15:08:45 by home             ###   ########.fr       */
+/*   Updated: 2021/10/13 16:06:36 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
-	free(tmp);
+	ft_memfree((void **)&lst);
 }
