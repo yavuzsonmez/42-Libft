@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:41:10 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/10/13 19:46:18 by home             ###   ########.fr       */
+/*   Updated: 2021/11/25 10:15:35 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,7 @@ void	ft_memfreeall(void **ptr);
 typedef struct s_list
 {
 	int			*content;
-	int			i;
-	int			mgt;
-	int			mi;
-	int			mf;
+	char		*path;
 	struct s_list	*next;
 }	t_list;
 
