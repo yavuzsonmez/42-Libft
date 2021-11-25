@@ -6,7 +6,7 @@
 #    By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/15 12:03:05 by ysonmez           #+#    #+#              #
-#    Updated: 2021/08/27 15:40:18 by ysonmez          ###   ########.fr        #
+#    Updated: 2021/11/25 10:07:22 by ysonmez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,10 +49,7 @@ SRCS	=		ft_atoi.c \
 				ft_toupper.c \
 				ft_memfree.c \
 				ft_memfreeall.c \
-
-OBJS	=		$(SRCS:.c=.o)
-
-BSRCS	=		ft_lstnew.c \
+				ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
@@ -62,37 +59,25 @@ BSRCS	=		ft_lstnew.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
 
-BOBJS	=		$(BSRCS:.c=.o)
-
-CC		=		gcc
+OBJS	=		$(SRCS:.c=.o)
 
 CFLAGS	=		-Wall -Wextra -Werror
 
-AR		=		ar rc
+.c.o	:
+				@gcc $(CFLAGS) -c $< -o $(<:.c=.o)
 
-RAN		=		ranlib
+$(NAME)	:		$(OBJS)
+				@ar rc $(NAME) $(OBJS)
+				@ranlib $(NAME)
 
-RM		=		rm -f
+clean	:
+				@rm -f $(OBJS)
 
-.c.o:
-			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+fclean	:		clean
+				@rm -f $(NAME)
 
-$(NAME):	$(OBJS)
-			$(AR) $(NAME) $(OBJS)
-			$(RAN) $(NAME)
+all		:		$(NAME)
 
-bonus:		$(NAME) $(BOBJS)
-			$(AR) $(NAME) $(BOBJS)
-			$(RAN) $(NAME)
+re		:		fclean all
 
-clean:
-			$(RM) $(OBJS) $(BOBJS)
-
-fclean:		clean
-			$(RM) $(NAME)
-
-all:		$(NAME)
-
-re:			fclean all
-
-.PHONY:		clean fclean all re bonus
+.PHONY	:		clean fclean all re
