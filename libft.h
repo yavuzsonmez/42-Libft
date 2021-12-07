@@ -6,7 +6,7 @@
 /*   By: ysonmez <ysonmez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 08:41:10 by ysonmez           #+#    #+#             */
-/*   Updated: 2021/11/25 10:15:35 by ysonmez          ###   ########.fr       */
+/*   Updated: 2021/12/06 15:04:06 by ysonmez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,16 @@ void	ft_memfreeall(void **ptr);
 typedef struct s_list
 {
 	int			*content;
-	char		*path;
+	char		**cmd;
+	char		*bin_path;
+	char		*filein_path;
+	char		*fileout_path;
+	char		*hd_delimiter;
+	int			suffix;
+	int			prefix;
+	bool		builtin;
+	bool		filein_access;
+	bool		fileout_access;
 	struct s_list	*next;
 }	t_list;
 
